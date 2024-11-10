@@ -8,7 +8,7 @@
 
 /* General Styles */
 body {
-    color: #333;
+    color: #000; /* Black text */
     background-color: #f4f4f4;
 }
 
@@ -28,7 +28,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #2e7d32;
+    background-color: #1b5e20; /* Dark green background */
     color: #fff;
     padding: 15px 0;
     display: flex;
@@ -55,7 +55,7 @@ body {
 
 .header nav ul li a:hover,
 .header nav ul li a.btn {
-    background-color: #66bb6a;
+    background-color: #388e3c; /* Lighter green for hover */
 }
 
 /* Banner */
@@ -74,12 +74,13 @@ body {
 /* Services */
 .services {
     padding: 60px 0;
-    background-color: #e8f5e9;
+    background-color: #d7ffd9; /* Light green background */
     text-align: center;
 }
 
 .services h2 {
     margin-bottom: 20px;
+    color: #000; /* Black text */
 }
 
 .service-items {
@@ -95,18 +96,21 @@ body {
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000; /* Black text */
 }
 
 /* About */
 .about {
     padding: 60px 0;
     text-align: center;
+    color: #000; /* Black text */
 }
 
 /* Contact */
 .contact {
     padding: 60px 0;
     text-align: center;
+    color: #000; /* Black text */
 }
 
 .contact form {
@@ -126,16 +130,28 @@ body {
 }
 
 .contact .btn {
-    background-color: #2e7d32;
+    background-color: #1b5e20; /* Dark green button */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
+/* Blog */
+.blog {
+    padding: 60px 0;
+    background-color: #d7ffd9; /* Light green background */
+    text-align: center;
+}
+
+.blog h2 {
+    color: #000; /* Black text */
+    margin-bottom: 20px;
+}
+
 /* Footer */
 .footer {
-    background-color: #2e7d32;
+    background-color: #1b5e20; /* Dark green background */
     color: white;
     text-align: center;
     padding: 15px 0;
