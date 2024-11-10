@@ -58,7 +58,7 @@ body {
 .header nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 25px; /* Increased gap for more space between buttons */
     flex-wrap: wrap;
 }
 
@@ -241,7 +241,7 @@ body {
 
     .header nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px; /* Slightly smaller gap for mobile */
     }
 
     .header-content {
