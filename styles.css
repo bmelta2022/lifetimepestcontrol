@@ -18,17 +18,20 @@ body {
     margin: auto;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* Logo */
 .logo {
     width: 120px; /* Increased size */
     height: auto;
-    margin-right: 15px;
 }
 
 .logo-link {
-    position: absolute;
-    left: 20px;
-    top: 15px;
+    margin-right: 15px;
 }
 
 /* Header */
@@ -39,13 +42,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    margin-left: 150px; /* Offset to create space for the larger logo */
 }
 
 /* Company Name in All Caps */
@@ -74,75 +70,6 @@ body {
 
 .header nav ul li .nav-button:hover {
     background-color: #2e7d32; /* Darker green on hover */
-}
-
-/* Centered Slideshow */
-.slideshow {
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 600px;
-    width: 100%;
-    border: 2px solid #1b5e20;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #d7ffd9; /* Light green background */
-    padding: 20px;
-}
-
-.slide {
-    display: none;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Fading effect */
-.fade {
-    animation: fadeEffect 1.5s;
-}
-
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-/* Navigation arrows */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Services Section */
