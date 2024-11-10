@@ -24,15 +24,17 @@ body {
     color: #fff;
     padding: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -40,9 +42,6 @@ body {
 .logo {
     width: 120px;
     height: auto;
-}
-
-.logo-link {
     margin-right: 15px;
 }
 
@@ -60,6 +59,9 @@ body {
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
 }
 
 .header nav ul li .nav-button {
@@ -70,14 +72,15 @@ body {
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
 }
 
-/* Hover Effect */
 .header nav ul li .nav-button:hover {
     background-color: #2e7d32;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
-    transform: scale(1.05); /* Slightly larger on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 /* Slideshow */
@@ -163,16 +166,17 @@ body {
 
 .service-items {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .service-item {
-    width: 45%;
+    width: 100%;
+    max-width: 500px;
     background: #fff;
     padding: 20px;
-    margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #000;
@@ -197,6 +201,8 @@ body {
     gap: 15px;
     max-width: 500px;
     margin: auto;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .contact-form input,
@@ -234,49 +240,4 @@ body {
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
-}
-
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header nav ul {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding: 0;
-    }
-
-    .header nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .header nav ul li .nav-button {
-        display: block;
-        width: 100%;
-        padding: 15px 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .header-content {
-        flex-direction: column;
-    }
-
-    .service-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 100%;
-    }
-
-    .contact-form {
-        width: 100%;
-        padding: 0 20px;
-    }
 }
