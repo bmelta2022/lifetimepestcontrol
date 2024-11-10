@@ -18,6 +18,14 @@ body {
     margin: auto;
 }
 
+/* Logo */
+.logo {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
 /* Header */
 .header {
     background-color: #2e7d32;
@@ -61,14 +69,6 @@ body {
 .banner h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-}
-
-.banner .btn {
-    background-color: #2e7d32;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
 }
 
 /* Services */
