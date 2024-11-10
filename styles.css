@@ -18,19 +18,10 @@ body {
     margin: auto;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 /* Logo */
 .logo {
-    width: 120px; /* Increased size */
+    width: 80px; /* Adjust as needed */
     height: auto;
-}
-
-.logo-link {
     margin-right: 15px;
 }
 
@@ -38,38 +29,106 @@ body {
 .header {
     background-color: #1b5e20; /* Dark green background */
     color: #fff;
-    padding: 20px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Company Name in All Caps */
-.company-name {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    color: #fff;
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
-/* Navigation Buttons */
+.header h1 {
+    margin-left: 10px;
+}
+
 .header nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
 }
 
-.header nav ul li .nav-button {
+.header nav ul li a {
     color: white;
-    background-color: #388e3c; /* Green background */
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-.header nav ul li .nav-button:hover {
-    background-color: #2e7d32; /* Darker green on hover */
+.header nav ul li a:hover,
+.header nav ul li a.btn {
+    background-color: #388e3c; /* Lighter green for hover */
+}
+
+/* Centered Slideshow */
+.slideshow {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid #1b5e20;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #d7ffd9; /* Light green background */
+    padding: 20px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Fading effect */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Services Section */
