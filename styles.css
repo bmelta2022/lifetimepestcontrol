@@ -40,26 +40,33 @@ body {
     align-items: center;
 }
 
-.header h1 {
+/* Company Name in All Caps */
+.company-name {
+    text-transform: uppercase;
+    font-size: 1.5em;
     margin-left: 10px;
+    color: #fff;
 }
 
+/* Navigation Buttons */
 .header nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
 }
 
-.header nav ul li a {
+.header nav ul li .nav-button {
     color: white;
+    background-color: #388e3c; /* Green background */
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.header nav ul li a:hover,
-.header nav ul li a.btn {
-    background-color: #388e3c; /* Lighter green for hover */
+.header nav ul li .nav-button:hover {
+    background-color: #2e7d32; /* Darker green on hover */
 }
 
 /* Centered Slideshow */
