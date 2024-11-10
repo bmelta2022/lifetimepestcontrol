@@ -1,9 +1,71 @@
-/* Slideshow Styles */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General Styles */
+body {
+    color: #000; /* Black text */
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Logo */
+.logo {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* Header */
+.header {
+    background-color: #1b5e20; /* Dark green background */
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin-left: 20px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.header nav ul li a:hover,
+.header nav ul li a.btn {
+    background-color: #388e3c; /* Lighter green for hover */
+}
+
+/* Slideshow */
 .slideshow {
     position: relative;
     max-width: 100%;
     margin: auto;
     overflow: hidden;
+    background-color: #d7ffd9; /* Light green background */
+    padding: 20px 0;
 }
 
 .slide {
@@ -40,6 +102,7 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .next {
@@ -54,4 +117,13 @@
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+.footer {
+    background-color: #1b5e20; /* Dark green background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
 }
