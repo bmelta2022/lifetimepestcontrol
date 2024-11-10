@@ -18,51 +18,63 @@ body {
     margin: auto;
 }
 
-/* Logo */
-.logo {
-    width: 80px; /* Adjust as needed */
-    height: auto;
-    margin-right: 15px;
-}
-
 /* Header */
 .header {
     background-color: #1b5e20; /* Dark green background */
     color: #fff;
-    padding: 15px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-left {
+.header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.header h1 {
+/* Logo */
+.logo {
+    width: 120px; /* Increased size */
+    height: auto;
+}
+
+.logo-link {
+    margin-right: 15px;
+}
+
+/* Company Name in All Caps */
+.company-name {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #fff;
     margin-left: 10px;
 }
 
+/* Navigation Buttons */
 .header nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
 }
 
-.header nav ul li a {
+.header nav ul li .nav-button {
     color: white;
+    background-color: #388e3c; /* Green background */
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.header nav ul li a:hover,
-.header nav ul li a.btn {
-    background-color: #388e3c; /* Lighter green for hover */
+.header nav ul li .nav-button:hover {
+    background-color: #2e7d32; /* Darker green on hover */
 }
 
-/* Centered Slideshow */
+/* Slideshow */
 .slideshow {
     display: flex;
     justify-content: center;
@@ -170,6 +182,43 @@ body {
 .service-item p {
     font-size: 1em;
     line-height: 1.5;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    background-color: #1b5e20;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.contact-form .btn:hover {
+    background-color: #388e3c;
 }
 
 /* Footer */
