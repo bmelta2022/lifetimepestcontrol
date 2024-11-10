@@ -241,7 +241,20 @@ body {
 
     .header nav ul {
         flex-direction: column;
-        gap: 15px; /* Slightly smaller gap for mobile */
+        gap: 10px; /* Reduce gap for mobile */
+        width: 100%; /* Full-width for mobile */
+        padding: 0;
+    }
+
+    .header nav ul li {
+        width: 100%; /* Full-width for each list item */
+        text-align: center;
+    }
+
+    .header nav ul li .nav-button {
+        display: block;
+        width: 100%; /* Full-width buttons */
+        padding: 12px 0; /* Adjust padding for a better mobile look */
     }
 
     .header-content {
