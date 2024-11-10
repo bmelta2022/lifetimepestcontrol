@@ -8,7 +8,7 @@
 
 /* General Styles */
 body {
-    color: #000; /* Black text */
+    color: #000;
     background-color: #f4f4f4;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #1b5e20; /* Dark green background */
+    background-color: #1b5e20;
     color: #fff;
     padding: 20px 0;
     display: flex;
@@ -46,7 +46,7 @@ body {
     margin-right: 15px;
 }
 
-/* Company Name in All Caps */
+/* Company Name */
 .company-name {
     text-transform: uppercase;
     font-size: 1.5em;
@@ -58,22 +58,26 @@ body {
 .header nav ul {
     list-style: none;
     display: flex;
-    gap: 25px; /* Increased gap for more space between buttons */
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .header nav ul li .nav-button {
     color: white;
-    background-color: #388e3c; /* Green background */
+    background-color: #388e3c;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
+/* Hover Effect */
 .header nav ul li .nav-button:hover {
-    background-color: #2e7d32; /* Darker green on hover */
+    background-color: #2e7d32;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    transform: scale(1.05); /* Slightly larger on hover */
 }
 
 /* Slideshow */
@@ -241,20 +245,21 @@ body {
 
     .header nav ul {
         flex-direction: column;
-        gap: 10px; /* Reduce gap for mobile */
-        width: 100%; /* Full-width for mobile */
+        gap: 15px;
+        width: 100%;
         padding: 0;
     }
 
     .header nav ul li {
-        width: 100%; /* Full-width for each list item */
+        width: 100%;
         text-align: center;
     }
 
     .header nav ul li .nav-button {
         display: block;
-        width: 100%; /* Full-width buttons */
-        padding: 12px 0; /* Adjust padding for a better mobile look */
+        width: 100%;
+        padding: 15px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .header-content {
