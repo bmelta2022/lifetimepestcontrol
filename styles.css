@@ -1,159 +1,57 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* General Styles */
-body {
-    color: #000; /* Black text */
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
+/* Slideshow Styles */
+.slideshow {
+    position: relative;
+    max-width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
-/* Logo */
-.logo {
-    width: 100px; /* Adjust as needed */
-    height: auto;
-    vertical-align: middle;
-    margin-right: 15px;
+.slide {
+    display: none;
 }
 
-/* Header */
-.header {
-    background-color: #1b5e20; /* Dark green background */
-    color: #fff;
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header h1 {
-    margin-left: 20px;
-}
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.header nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-.header nav ul li a:hover,
-.header nav ul li a.btn {
-    background-color: #388e3c; /* Lighter green for hover */
-}
-
-/* Banner */
-.banner {
-    background: url('pest-control-banner.jpg') no-repeat center center/cover;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.banner h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* Services */
-.services {
-    padding: 60px 0;
-    background-color: #d7ffd9; /* Light green background */
-    text-align: center;
-}
-
-.services h2 {
-    margin-bottom: 20px;
-    color: #000; /* Black text */
-}
-
-.service-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-item {
-    width: 45%;
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #000; /* Black text */
-}
-
-/* About */
-.about {
-    padding: 60px 0;
-    text-align: center;
-    color: #000; /* Black text */
-}
-
-/* Contact */
-.contact {
-    padding: 60px 0;
-    text-align: center;
-    color: #000; /* Black text */
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact input,
-.contact textarea {
-    padding: 10px;
+.slide img {
     width: 100%;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    height: auto;
+    border-radius: 10px;
 }
 
-.contact .btn {
-    background-color: #1b5e20; /* Dark green button */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+/* Fading effect */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Navigation arrows */
+.prev, .next {
     cursor: pointer;
-}
-
-/* Blog */
-.blog {
-    padding: 60px 0;
-    background-color: #d7ffd9; /* Light green background */
-    text-align: center;
-}
-
-.blog h2 {
-    color: #000; /* Black text */
-    margin-bottom: 20px;
-}
-
-/* Footer */
-.footer {
-    background-color: #1b5e20; /* Dark green background */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
     color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
