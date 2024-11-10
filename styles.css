@@ -20,9 +20,8 @@ body {
 
 /* Logo */
 .logo {
-    width: 100px; /* Adjust as needed */
+    width: 80px; /* Adjust as needed */
     height: auto;
-    vertical-align: middle;
     margin-right: 15px;
 }
 
@@ -36,8 +35,13 @@ body {
     align-items: center;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
 .header h1 {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .header nav ul {
@@ -58,14 +62,22 @@ body {
     background-color: #388e3c; /* Lighter green for hover */
 }
 
-/* Slideshow */
+/* Centered Slideshow */
 .slideshow {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.slideshow-container {
     position: relative;
-    max-width: 100%;
-    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid #1b5e20;
+    border-radius: 10px;
     overflow: hidden;
     background-color: #d7ffd9; /* Light green background */
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .slide {
