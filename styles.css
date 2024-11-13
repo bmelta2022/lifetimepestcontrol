@@ -52,33 +52,29 @@ body {
     margin-left: 10px;
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - Default for Desktop */
 .header nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
-    justify-content: center; /* Center items on mobile */
+    justify-content: center; /* Center the navigation items on desktop */
+    padding: 0;
+    margin: 0;
 }
 
-.header nav ul li {
-    width: 100%;
-    text-align: center;
-}
-
-/* Button Styling for Mobile */
+/* Button Styling for Desktop */
 .header nav ul li .nav-button {
     color: white;
     background-color: #388e3c;
     text-decoration: none;
-    padding: 15px 0;
+    padding: 15px 30px;
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%; /* Set width to center-align */
-    margin: 5px auto; /* Center align and add vertical spacing */
-    display: block;
+    display: inline-block; /* Display inline on desktop */
+    margin: 5px; /* Small margin around buttons for spacing */
 }
 
 /* Slideshow */
@@ -269,6 +265,25 @@ body {
     .header-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Stack navigation items vertically on mobile */
+    .header nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header nav ul li .nav-button {
+        width: 80%; /* Set width to center-align */
+        margin: 5px auto; /* Center-align the buttons */
+        padding: 15px 0; /* Full-width padding */
+        display: block;
     }
 
     .service-items, .review-cards {
