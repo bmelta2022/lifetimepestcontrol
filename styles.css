@@ -1,3 +1,18 @@
+/* Root Variables for Consistency */
+:root {
+    --main-padding: 20px;
+    --main-border-radius: 8px;
+    --main-bg-color: #1b5e20;
+    --accent-color: #388e3c;
+    --text-color: #000;
+    --container-bg: #f4f4f4;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+    --highlight-color: #d7ffd9;
+    --button-shadow: rgba(0, 0, 0, 0.2);
+    --rating-color: #ffc107;
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -8,8 +23,8 @@
 
 /* General Styles */
 body {
-    color: #000;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--container-bg);
 }
 
 .container {
@@ -20,9 +35,9 @@ body {
 
 /* Header */
 .header {
-    background-color: #1b5e20;
+    background-color: var(--main-bg-color);
     color: #fff;
-    padding: 20px 0;
+    padding: var(--main-padding) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,22 +73,22 @@ body {
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
-    justify-content: center; /* Center the navigation items on desktop */
+    justify-content: center;
     padding: 0;
     margin: 0;
 }
 
 .header nav ul li .nav-button {
     color: white;
-    background-color: #388e3c;
+    background-color: var(--accent-color);
     text-decoration: none;
     padding: 15px 30px;
-    border-radius: 8px;
+    border-radius: var(--main-border-radius);
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block; /* Display inline on desktop */
-    margin: 5px; /* Small margin around buttons for spacing */
+    box-shadow: 0 4px 8px var(--button-shadow);
+    display: inline-block;
+    margin: 5px;
 }
 
 /* Slideshow */
@@ -87,11 +102,11 @@ body {
     position: relative;
     max-width: 600px;
     width: 100%;
-    border: 2px solid #1b5e20;
+    border: 2px solid var(--main-bg-color);
     border-radius: 10px;
     overflow: hidden;
-    background-color: #d7ffd9;
-    padding: 20px;
+    background-color: var(--highlight-color);
+    padding: var(--main-padding);
 }
 
 .slide {
@@ -101,7 +116,7 @@ body {
 .slide img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--main-border-radius);
 }
 
 .fade {
@@ -109,22 +124,26 @@ body {
 }
 
 @keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+    from { transform: scale(0.95); opacity: 0.4; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.prev, .next, .scroll-to-top {
+    background-color: var(--main-bg-color);
+    color: white;
+    box-shadow: 0 4px 8px var(--shadow-heavy);
 }
 
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: var(--main-border-radius);
     user-select: none;
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -146,7 +165,7 @@ body {
 /* Services Section */
 .services {
     padding: 60px 0;
-    background-color: #d7ffd9;
+    background-color: var(--highlight-color);
     text-align: center;
 }
 
@@ -155,18 +174,18 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 var(--main-padding);
 }
 
 .service-item {
     background: #fff;
-    padding: 20px;
+    padding: var(--main-padding);
     margin: 10px 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #000;
+    box-shadow: 0 0 10px var(--shadow-light);
+    color: var(--text-color);
     text-align: left;
-    border: 2px solid #1b5e20;
+    border: 2px solid var(--main-bg-color);
 }
 
 /* Customer Reviews Section */
@@ -178,7 +197,7 @@ body {
 
 .reviews h2 {
     font-size: 2em;
-    color: #1b5e20;
+    color: var(--main-bg-color);
     margin-bottom: 20px;
 }
 
@@ -192,9 +211,9 @@ body {
 
 .review-card {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--main-padding);
+    border-radius: var(--main-border-radius);
+    box-shadow: 0 4px 8px var(--shadow-light);
     width: 300px;
     text-align: left;
     position: relative;
@@ -210,11 +229,11 @@ body {
 .review-card .reviewer {
     font-weight: bold;
     margin-top: 10px;
-    color: #1b5e20;
+    color: var(--main-bg-color);
 }
 
 .review-card .rating {
-    color: #ffc107;
+    color: var(--rating-color);
     font-size: 1.2em;
     margin: 5px 0;
 }
@@ -224,25 +243,21 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #1b5e20;
-    color: white;
-    border: none;
     padding: 10px;
     border-radius: 50%;
     font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: none;
     transition: opacity 0.3s;
 }
 
 .scroll-to-top:hover {
-    background-color: #388e3c;
+    background-color: var(--accent-color);
 }
 
 /* Footer Styling */
 .footer {
-    background-color: #1b5e20; /* Dark green background */
+    background-color: var(--main-bg-color);
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -269,36 +284,54 @@ body {
     .header nav ul {
         flex-direction: column;
         width: 100%;
-        gap: 5px; /* Small gap between buttons */
+        gap: 5px;
         padding: 0;
     }
 
     .header nav ul li .nav-button {
-        width: 100%; /* Full width for easier access */
-        max-width: none; /* Remove max width restriction */
-        margin: 5px 0; /* Adjust top and bottom margin */
-        padding: 10px 0; /* Reduce padding to increase viewable area */
-        font-size: 1.1em; /* Increase font size for better readability on small screens */
-        border-radius: 0; /* Optional: remove border radius for a cleaner, block-style look */
+        width: 100%;
+        max-width: none;
+        margin: 5px 0;
+        padding: 10px 0;
+        font-size: 1.1em;
+        border-radius: 0;
     }
 }
 
 @media (max-width: 480px) {
     .header nav ul li .nav-button {
         padding: 8px 0;
-        font-size: 1em; /* Adjust the font size for very small devices */
+        font-size: 1em;
     }
 
     .service-items {
-        padding: 0 10px; /* Reduce side padding on very small screens */
+        padding: 0 10px;
     }
 
     .service-item {
-        padding: 15px; /* Slightly reduce padding for more space efficiency */
+        padding: 15px;
     }
 }
 
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f4f4f4;
+    }
+
+    .header, .footer {
+        background-color: #222;
+    }
+
+    .service-item, .review-card {
+        background-color: #444;
+        border-color: #555;
+        color: #ddd;
+    }
 }
