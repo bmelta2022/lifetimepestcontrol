@@ -52,18 +52,15 @@ body {
     margin-left: 10px;
 }
 
-/* Navigation Buttons - Default for Desktop */
+/* Navigation Buttons */
 .header nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
-    justify-content: center; /* Center the navigation items on desktop */
-    padding: 0;
-    margin: 0;
+    justify-content: center;
 }
 
-/* Button Styling for Desktop */
 .header nav ul li .nav-button {
     color: white;
     background-color: #388e3c;
@@ -73,8 +70,8 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block; /* Display inline on desktop */
-    margin: 5px; /* Small margin around buttons for spacing */
+    display: inline-block;
+    margin: 5px;
 }
 
 /* Slideshow */
@@ -243,7 +240,7 @@ body {
 
 /* Footer Styling */
 .footer {
-    background-color: #1b5e20; /* Dark green background */
+    background-color: #1b5e20;
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -255,84 +252,19 @@ body {
     flex-direction: column;
 }
 
-/* Responsive Updates for Mobile Screens */
+/* Responsive Updates */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         text-align: center;
     }
-
-    .header-content {
+    .header-content, .service-items, .review-cards {
         flex-direction: column;
         align-items: center;
     }
-
-    /* Stack navigation items vertically on mobile */
-    .header nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 5px; /* Small gap between buttons */
-        padding: 0;
-    }
-
-    .header nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .header nav ul li .nav-button {
-        width: 90%; /* Center-align the buttons with reduced width */
-        max-width: 300px; /* Limit button width for larger screens */
-        margin: 5px auto; /* Center-align and add small margin */
-        padding: 10px 0; /* Adjust padding to fit mobile */
-        display: block;
-        font-size: 1.1em; /* Slightly larger text for readability */
-    }
-
-    .service-items, .review-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .service-item, .review-card {
         width: 100%;
         margin: 10px 0;
-    }
-
-    .company-name {
-        font-size: 1.2em;
-    }
-
-    .reviews h2, .services h2 {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .company-name {
-        font-size: 1em;
-    }
-
-    .header nav ul {
-        gap: 3px; /* Further reduced gap on very small screens */
-    }
-
-    .header nav ul li .nav-button {
-        padding: 8px 0;
-        font-size: 1em;
-    }
-
-    .service-item, .review-card {
-        padding: 15px;
-    }
-
-    .review-card p {
-        font-size: 0.9em;
-    }
-
-    .scroll-to-top {
-        padding: 8px;
-        font-size: 16px;
     }
 }
 
