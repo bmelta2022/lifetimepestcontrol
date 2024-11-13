@@ -280,3 +280,104 @@ body {
         padding: 0 20px;
     }
 }
+/* Blog Section */
+.blog-section {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.blog-section h2 {
+    font-size: 2em;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.featured-blogs {
+    margin-top: 40px;
+}
+
+.featured-blogs h3,
+.recent-articles h3 {
+    font-size: 1.8em;
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+/* Blog Grid for Featured Articles */
+.blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-post h4 {
+    font-size: 1.2em;
+    color: #1b5e20;
+    margin: 15px;
+}
+
+.blog-post p {
+    font-size: 0.95em;
+    color: #555;
+    margin: 15px;
+}
+
+.read-more {
+    display: block;
+    color: #388e3c;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+    text-align: right;
+}
+
+.read-more:hover {
+    color: #1b5e20;
+}
+
+/* Recent Articles List */
+.recent-articles {
+    margin-top: 40px;
+}
+
+.article-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.article-list li {
+    margin: 10px 0;
+}
+
+.article-list li a {
+    color: #388e3c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.article-list li a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
