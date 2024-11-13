@@ -9,7 +9,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    setTimeout(showSlides, 3000);
 }
 
 function plusSlides(n) {
@@ -23,3 +23,16 @@ function plusSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
+window.onscroll = function() {
+    let scrollButton = document.querySelector(".scroll-to-top");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
