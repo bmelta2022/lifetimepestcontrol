@@ -151,17 +151,17 @@ body {
 }
 
 .service-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .service-item {
-    width: 45%;
     background: #fff;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #000;
@@ -208,7 +208,7 @@ body {
 }
 
 .review-card .reviewer {
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 10px;
     color: #1b5e20;
 }
@@ -266,17 +266,11 @@ body {
         align-items: center;
     }
 
-    /* Stack navigation items vertically on mobile */
     .header nav ul {
         flex-direction: column;
         width: 100%;
         gap: 5px; /* Small gap between buttons */
         padding: 0;
-    }
-
-    .header nav ul li {
-        width: 100%;
-        text-align: center;
     }
 
     .header nav ul li .nav-button {
@@ -289,11 +283,18 @@ body {
     }
 }
 
-/* Optional: Adjust the header size on very small devices */
 @media (max-width: 480px) {
     .header nav ul li .nav-button {
         padding: 8px 0;
         font-size: 1em; /* Adjust the font size for very small devices */
+    }
+
+    .service-items {
+        padding: 0 10px; /* Reduce side padding on very small screens */
+    }
+
+    .service-item {
+        padding: 15px; /* Slightly reduce padding for more space efficiency */
     }
 }
 
