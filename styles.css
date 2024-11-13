@@ -243,6 +243,37 @@ body {
 
 /* Responsive Updates for Mobile Screens */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .service-items, .review-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item, .review-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     .slideshow-container {
         padding: 10px;
     }
@@ -251,37 +282,40 @@ body {
         border-radius: 5px;
     }
 
-    .review-cards, .service-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .review-card, .service-item {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header nav ul {
-        gap: 10px;
-    }
-
-    .header nav ul li .nav-button {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-
-    .review-card, .service-item {
-        width: 100%;
-        margin: 10px 0;
-    }
-
     .company-name {
         font-size: 1.2em;
     }
 
     .reviews h2, .services h2 {
         font-size: 1.5em;
+    }
+
+    .nav-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 1em;
+    }
+
+    .header nav ul {
+        gap: 5px;
+    }
+
+    .service-item, .review-card {
+        padding: 15px;
+    }
+
+    .review-card p {
+        font-size: 0.9em;
+    }
+
+    .scroll-to-top {
+        padding: 8px;
+        font-size: 16px;
     }
 }
 
