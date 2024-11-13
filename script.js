@@ -9,7 +9,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
 function plusSlides(n) {
@@ -23,6 +23,7 @@ function plusSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
+// Scroll to Top Button
 window.onscroll = function() {
     let scrollButton = document.querySelector(".scroll-to-top");
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
