@@ -1,40 +1,28 @@
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.header nav ul');
-
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-// Slideshow functionality
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    const slides = document.querySelectorAll(".slide");
-    slides.forEach(slide => (slide.style.display = "none"));
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
     slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
 function plusSlides(n) {
-    slideIndex += n - 1; // Adjusts based on next/prev
-    showSlides();
+    slideIndex += n;
+    let slides = document.getElementsByClassName("slide");
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
 }
 
-// Scroll to top functionality
-const scrollToTopButton = document.querySelector('.scroll-to-top');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopButton.classList.add('visible');
-    } else {
-        scrollToTopButton.classList.remove('visible');
-    }
-});
-
-scrollToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// Scroll to Top Button
+window.onscroll = function() {
+    let scrollButton = document.querySelector(".scroll-to-top");
