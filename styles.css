@@ -2,15 +2,13 @@
 :root {
     --main-padding: 20px;
     --main-border-radius: 8px;
-    --main-bg-color: #1b5e20;
-    --accent-color: #388e3c;
-    --text-color: #000;
-    --container-bg: #f4f4f4;
-    --shadow-light: rgba(0, 0, 0, 0.1);
-    --shadow-heavy: rgba(0, 0, 0, 0.3);
-    --highlight-color: #d7ffd9;
+    --main-bg-color: #1b5e20; /* Dark green */
+    --accent-color: #388e3c; /* Lighter green for contrast */
+    --text-color: #000; /* Black text */
+    --background-color: #ffffff; /* White background */
+    --highlight-color: #d7ffd9; /* Light green for highlights */
     --button-shadow: rgba(0, 0, 0, 0.2);
-    --rating-color: #ffc107;
+    --border-color: #1b5e20; /* Consistent border color */
 }
 
 /* Reset */
@@ -24,7 +22,7 @@
 /* General Styles */
 body {
     color: var(--text-color);
-    background-color: var(--container-bg);
+    background-color: var(--background-color);
 }
 
 .container {
@@ -36,7 +34,7 @@ body {
 /* Header */
 .header {
     background-color: var(--main-bg-color);
-    color: #fff;
+    color: white;
     padding: var(--main-padding) 0;
     display: flex;
     justify-content: space-between;
@@ -63,7 +61,7 @@ body {
 .company-name {
     text-transform: uppercase;
     font-size: 1.5em;
-    color: #fff;
+    color: white;
     margin-left: 10px;
 }
 
@@ -102,7 +100,7 @@ body {
     position: relative;
     max-width: 600px;
     width: 100%;
-    border: 2px solid var(--main-bg-color);
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
     background-color: var(--highlight-color);
@@ -131,7 +129,7 @@ body {
 .prev, .next, .scroll-to-top {
     background-color: var(--main-bg-color);
     color: white;
-    box-shadow: 0 4px 8px var(--shadow-heavy);
+    box-shadow: 0 4px 8px var(--button-shadow);
 }
 
 .prev, .next {
@@ -139,7 +137,6 @@ body {
     position: absolute;
     top: 50%;
     padding: 16px;
-    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -178,20 +175,20 @@ body {
 }
 
 .service-item {
-    background: #fff;
+    background: white;
     padding: var(--main-padding);
     margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px var(--shadow-light);
+    border-radius: var(--main-border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: var(--text-color);
     text-align: left;
-    border: 2px solid var(--main-bg-color);
+    border: 2px solid var(--border-color);
 }
 
 /* Customer Reviews Section */
 .reviews {
     padding: 60px 0;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     text-align: center;
 }
 
@@ -210,10 +207,10 @@ body {
 }
 
 .review-card {
-    background-color: #fff;
+    background-color: white;
     padding: var(--main-padding);
     border-radius: var(--main-border-radius);
-    box-shadow: 0 4px 8px var(--shadow-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: left;
     position: relative;
@@ -233,7 +230,7 @@ body {
 }
 
 .review-card .rating {
-    color: var(--rating-color);
+    color: #ffc107; /* Gold color for rating */
     font-size: 1.2em;
     margin: 5px 0;
 }
@@ -316,22 +313,4 @@ body {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #333;
-        color: #f4f4f4;
-    }
-
-    .header, .footer {
-        background-color: #222;
-    }
-
-    .service-item, .review-card {
-        background-color: #444;
-        border-color: #555;
-        color: #ddd;
-    }
 }
