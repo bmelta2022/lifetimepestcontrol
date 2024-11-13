@@ -170,51 +170,54 @@ body {
     border: 2px solid #1b5e20;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact-form .btn {
-    background-color: #1b5e20;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.contact-form .btn:hover {
-    background-color: #388e3c;
-}
-
-/* Footer */
-.footer {
-    background-color: #1b5e20;
-    color: white;
+/* Customer Reviews Section */
+.reviews {
+    padding: 60px 0;
+    background-color: #f9f9f9;
     text-align: center;
-    padding: 15px 0;
+}
+
+.reviews h2 {
+    font-size: 2em;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.review-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-top: 20px;
 }
 
-/* Blog Section */
-.blog-section {
-    padding: 60px 0;
-    background-color: #f4f4f4;
-    text-align: center;
+.review-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.review-card p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.review-card .reviewer {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #1b5e20;
+}
+
+.review-card .rating {
+    color: #ffc107;
+    font-size: 1.2em;
+    margin: 5px 0;
 }
 
 /* Scroll to Top Button */
@@ -238,40 +241,51 @@ body {
     background-color: #388e3c;
 }
 
-/* Media Queries */
+/* Responsive Updates for Mobile Screens */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
+    .slideshow-container {
+        padding: 10px;
     }
 
-    .header nav ul {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding: 0;
+    .slide img {
+        border-radius: 5px;
     }
 
-    .header nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .header-content {
-        flex-direction: column;
-    }
-
-    .service-items {
+    .review-cards, .service-items {
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-form {
-        width: 100%;
-        padding: 0 20px;
+    .review-card, .service-item {
+        width: 90%;
     }
 }
 
+@media (max-width: 480px) {
+    .header nav ul {
+        gap: 10px;
+    }
+
+    .header nav ul li .nav-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .review-card, .service-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .company-name {
+        font-size: 1.2em;
+    }
+
+    .reviews h2, .services h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
