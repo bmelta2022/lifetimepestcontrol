@@ -3,7 +3,7 @@
     --main-padding: 20px;
     --main-border-radius: 8px;
     --main-bg-color: #1b5e20; /* Dark green */
-    --accent-color: #388e3c; /* Lighter green for contrast */
+    --accent-color: #388e3c; /* Lighter green */
     --text-color: #000; /* Black text */
     --background-color: #ffffff; /* White background */
     --highlight-color: #d7ffd9; /* Light green for highlights */
@@ -22,7 +22,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* General Styles */
 body {
     color: var(--text-color);
     background-color: var(--background-color);
@@ -58,34 +57,25 @@ body {
     height: auto;
 }
 
-.logo-link {
-    margin-right: 15px;
-}
-
 .company-name {
     text-transform: uppercase;
     font-size: var(--font-xlarge);
     color: white;
-    margin-left: 10px;
 }
 
 /* Navigation Bar */
 .header nav {
-    width: 100%; /* Ensures the nav takes full width of its container */
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 0 10px; /* Padding on smaller screens */
+    padding: 0 10px;
 }
 
 .header nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
-    width: auto;
 }
 
 .header nav ul li {
@@ -96,61 +86,49 @@ body {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s;
+    border-radius: 5px;
 }
 
 .header nav ul li a:hover,
 .header nav ul li a:focus {
     color: var(--accent-color);
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: center;
     }
 
     .header nav ul {
         flex-direction: column;
-        width: 100%; /* Full width on mobile */
-        display: none; /* Initially hidden on mobile */
+        width: 100%;
+        display: none;
         position: absolute;
-        top: var(--header-height); /* Position below the header */
+        top: var(--header-height);
         left: 0;
-        background-color: var(--main-bg-color); /* Background match */
-        z-index: 999;
+        background-color: var(--main-bg-color);
     }
 
     .header nav ul.active {
-        display: flex; /* Shows the menu when active */
-    }
-
-    .header nav ul li {
-        width: 100%; /* Full width links */
-        text-align: center;
-    }
-
-    .header nav ul li a {
-        display: block; /* Makes the whole area clickable */
-        padding: 10px;
-        border-bottom: 1px solid var(--background-color); /* Separates items */
+        display: flex;
     }
 
     .menu-toggle {
-        display: block; /* Button to toggle menu */
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 30px;
-        color: white;
+        display: block;
     }
 }
 
@@ -182,25 +160,14 @@ body {
     border-radius: var(--main-border-radius);
 }
 
-.fade {
-    animation: fadeEffect 1.5s;
-}
-
-@keyframes fadeEffect {
-    from { transform: scale(0.95); opacity: 0.4; }
-    to { transform: scale(1); opacity: 1; }
-}
-
 .prev, .next {
     cursor: pointer;
-    position:absolute;
+    position: absolute;
     top: 50%;
     padding: 16px;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
     border-radius: var(--main-border-radius);
-    user-select: none;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -218,136 +185,6 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Services Section */
-.services {
-    padding: 60px 0;
-    background-color: var(--highlight-color);
-    text-align: center;
-}
-
-.service-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    padding: 0 var(--main-padding);
-}
-
-.service-item {
-    background: white;
-    padding: var(--main-padding);
-    margin: 10px 0;
-    border-radius: var(--main-border-radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: var(--text-color);
-    text-align: left;
-    border: 2px solid var(--border-color);
-}
-
-/* Customer Reviews Section */
-.reviews {
-    padding: 60px 0;
-    background-color: var(--background-color);
-    text-align: center;
-}
-
-.reviews h2 {
-    font-size: var(--font-xlarge);
-    color: var(--main-bg-color);
-    margin-bottom: 20px;
-}
-
-.review-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.review-card {
-    background-color: white;
-    padding: var(--main-padding);
-    border-radius: var(--main-border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: left;
-    position:relative;
-    border: 1px solid #ddd;
-}
-
-.review-card p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #555;
-}
-
-.review-card .reviewer {
-    font-weight: bold;
-    margin-top: 10px;
-    color: var(--main-bg-color);
-}
-
-.review-card .rating {
-    color: #ffc107; /* Gold color for rating */
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-/* Contact Form Styling */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form label {
-    font-weight: bold;
-    color: var(--main-bg-color);
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--main-border-radius);
-    font-size: 1em;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.contact-form .btn {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: var(--main-border-radius);
-    cursor: pointer;
-    font-size: 1em;
-    font-weight:bold;
-    transition: background-color 0.3s;
-}
-
-.contact-form .btn:hover {
-    background-color: var(--main-bg-color);
-}
-
-/* Link Color */
-a {
-    color: var(--main-bg-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
@@ -356,3 +193,18 @@ a:hover {
     padding: 10px;
     border-radius: 50%;
     font-size: 18px;
+    background-color: var(--main-bg-color);
+    color: white;
+    display: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.scroll-to-top.visible {
+    display: block;
+    opacity: 0.8;
+}
+
+/* Other Sections: Services, Reviews, Footer, etc. */
+/* Add additional styles as needed for your layout */
