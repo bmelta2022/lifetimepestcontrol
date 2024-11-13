@@ -31,21 +31,30 @@
     <section id="contact" class="services">
         <div class="container">
             <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please reach out using the form below. We're here to help!</p>
             <form action="submit_form.php" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
                 <button type="submit" class="btn">Send Message</button>
             </form>
-            <p>Phone: 437-522-6159 | Email: noman.mahmood1@hotmail.com</p>
+            <p>Phone: 437-522-6159 | Email: <a href="mailto:noman.mahmood1@hotmail.com">noman.mahmood1@hotmail.com</a></p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Phone: 437-522-6159 | Email: noman.mahmood1@hotmail.com</p>
+            <p>Phone: 437-522-6159 | Email: <a href="mailto:noman.mahmood1@hotmail.com">noman.mahmood1@hotmail.com</a></p>
             <p>&copy; 2024 Lifetime Pest Control. All rights reserved.</p>
         </div>
     </footer>
