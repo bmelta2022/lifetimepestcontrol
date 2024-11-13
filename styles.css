@@ -9,6 +9,9 @@
     --highlight-color: #d7ffd9; /* Light green for highlights */
     --button-shadow: rgba(0, 0, 0, 0.2);
     --border-color: #1b5e20; /* Consistent border color */
+    --font-large: 1.2em;
+    --font-xlarge: 1.5em;
+    --header-height: 80px;
 }
 
 /* Reset */
@@ -36,6 +39,7 @@ body {
     background-color: var(--main-bg-color);
     color: white;
     padding: var(--main-padding) 0;
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +64,7 @@ body {
 
 .company-name {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: var(--font-xlarge);
     color: white;
     margin-left: 10px;
 }
@@ -98,7 +102,7 @@ body {
 
 .slideshow-container {
     position: relative;
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     border: 2px solid var(--border-color);
     border-radius: 10px;
@@ -193,7 +197,7 @@ body {
 }
 
 .reviews h2 {
-    font-size: 2em;
+    font-size: var(--font-xlarge);
     color: var(--main-bg-color);
     margin-bottom: 20px;
 }
@@ -349,22 +353,4 @@ a:hover {
     }
 }
 
-@media (max-width: 480px) {
-    .header nav ul li .nav-button {
-        padding: 8px 0;
-        font-size: 1em;
-    }
-
-    .service-items {
-        padding: 0 10px;
-    }
-
-    .service-item {
-        padding: 15px;
-    }
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
+@media (max-width:
