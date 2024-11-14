@@ -47,3 +47,37 @@ window.addEventListener("scroll", () => {
 scrollButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Blog search functionality
+function filterPosts() {
+    const searchQuery = document.getElementById("search-bar").value.toLowerCase();
+    const posts = document.getElementsByClassName("blog-post");
+
+    for (let post of posts) {
+        const title = post.getElementsByTagName("h4")[0].innerText.toLowerCase();
+        const content = post.getElementsByTagName("p")[0].innerText.toLowerCase();
+        post.style.display = (title.includes(searchQuery) || content.includes(searchQuery)) ? "block" : "none";
+    }
+}
+
+// Load more posts functionality
+function loadMorePosts() {
+    const hiddenPosts = document.querySelectorAll(".blog-post.hidden");
+    hiddenPosts.forEach((post, index) => {
+        if (index < 2) { // Show 2 posts at a time
+            post.classList.remove("hidden");
+        }
+    });
+
+    // Hide load more button if no more hidden posts
+    if (document.querySelectorAll(".blog-post.hidden").length === 0) {
+        document.getElementById("load-more").style.display = "none";
+    }
+}
+
+// Like button functionality
+function likePost(button) {
+    const likeCount = button.querySelector(".like-count");
+    let count = parseInt(likeCount.textContent);
+    likeCount.textContent = count + 1;
+}
