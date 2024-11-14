@@ -1,52 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const feedback = document.getElementById("form-feedback");
+// Slideshow functionality
+let slideIndex = 0;
+showSlides();
 
-    // Form Validation
-    function validateForm() {
-        let isValid = true;
-        const inputs = form.querySelectorAll("input[required], textarea[required]");
+// Function to control next/previous slide
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+}
 
-        inputs.forEach((input) => {
-            if (!input.value.trim()) {
-                input.style.borderColor = "red";
-                isValid = false;
-            } else {
-                input.style.borderColor = "#ccc";
-            }
-        });
-
-        return isValid;
+// Function to display slides
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    
+    if (slideIndex >= slides.length) slideIndex = 0; // Loop back to the first slide
+    if (slideIndex < 0) slideIndex = slides.length - 1; // Loop back to the last slide
+    
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    
+    // Show the current slide
+    slides[slideIndex].style.display = "block";
+}
 
-    // AJAX Form Submission
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+// Auto slideshow - change slide every 5 seconds
+setInterval(() => {
+    slideIndex++;
+    showSlides();
+}, 5000); // Change slide every 5000ms (5 seconds)
 
-        if (!validateForm()) {
-            feedback.textContent = "Please fill out all required fields correctly.";
-            feedback.style.color = "red";
-            feedback.style.display = "block";
-            return;
-        }
+// Scroll-to-Top button functionality
+const scrollButton = document.querySelector(".scroll-to-top");
+scrollButton.style.display = "none";
 
-        const formData = new FormData(form);
+// Show or hide the scroll-to-top button based on scroll position
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+});
 
-        fetch("submit_form.php", {
-            method: "POST",
-            body: formData
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            feedback.textContent = data.message;
-            feedback.style.color = data.status === "success" ? "#1b5e20" : "red";
-            feedback.style.display = "block";
-            if (data.status === "success") form.reset();
-        })
-        .catch((error) => {
-            feedback.textContent = "There was an error. Please try again later.";
-            feedback.style.color = "red";
-            feedback.style.display = "block";
-        });
-    });
+// Function to scroll to the top of the page
+scrollButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
