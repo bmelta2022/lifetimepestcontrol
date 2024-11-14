@@ -73,9 +73,29 @@ function loadMorePosts() {
     }
 }
 
-// Like button functionality
+// Like button functionality for both blog and blog detail pages
 function likePost(button) {
     const likeCount = button.querySelector(".like-count");
     let count = parseInt(likeCount.textContent);
     likeCount.textContent = count + 1;
+}
+
+// Add comment functionality for blog detail page
+function addComment(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("commenter-name").value.trim();
+    const text = document.getElementById("comment-text").value.trim();
+
+    if (name && text) {
+        const commentSection = document.getElementById("comments");
+        const newComment = document.createElement("div");
+        newComment.classList.add("comment");
+        
+        newComment.innerHTML = `<p class="commenter">${name}</p><p>${text}</p>`;
+        commentSection.appendChild(newComment);
+
+        // Clear form fields
+        document.getElementById("comment-form").reset();
+    }
 }
