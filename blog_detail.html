@@ -28,37 +28,52 @@
     </header>
 
     <!-- Blog Detail Section -->
-    <section class="blog-detail container">
-        <div class="content">
-            <article>
-                <h2>Top 5 Tips for Effective Pest Control</h2>
+    <section class="blog-detail">
+        <div class="container">
+            <h2>Blog Articles</h2>
+
+            <!-- Article 1 -->
+            <div id="top-tips">
+                <h3>Top 5 Tips for Effective Pest Control</h3>
                 <p>Discover essential pest control tips that every homeowner should know to keep pests at bay.</p>
-                <button onclick="likePost(this)" class="like-button">👍 <span class="like-count">0</span></button>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                 <!-- Full article content goes here -->
-            </article>
+            </div>
 
-            <!-- Comment Section -->
-            <section class="comment-section">
-                <h3>Comments</h3>
-                <div id="comments" class="comments"></div>
-                <form id="comment-form" onsubmit="addComment(event)">
-                    <input type="text" id="commenter-name" placeholder="Your Name" required>
-                    <textarea id="comment-text" placeholder="Your Comment" required></textarea>
-                    <button type="submit" class="btn">Post Comment</button>
-                </form>
-            </section>
+            <!-- Article 2 -->
+            <div id="eco-friendly">
+                <h3>Eco-Friendly Pest Control Solutions</h3>
+                <p>Learn about safe, environmentally friendly methods to manage pest problems without harmful chemicals.</p>
+                <!-- Full article content goes here -->
+            </div>
+
+            <!-- Article 3 -->
+            <div id="winter-pests">
+                <h3>Preventing Pests in the Winter Months</h3>
+                <p>Strategies to keep pests out during colder seasons.</p>
+                <!-- Full article content goes here -->
+            </div>
+
+            <!-- Article 4 -->
+            <div id="diy-vs-pro">
+                <h3>DIY Pest Control vs. Professional Services</h3>
+                <p>Comparing the effectiveness and costs of DIY solutions versus professional pest control.</p>
+                <!-- Full article content goes here -->
+            </div>
+
+            <!-- Article 5 -->
+            <div id="garden-pest-free">
+                <h3>How to Keep Your Garden Pest-Free</h3>
+                <p>Tips for protecting your garden from pests naturally and effectively.</p>
+                <!-- Full article content goes here -->
+            </div>
+
+            <!-- Article 6 -->
+            <div id="pest-control-myths">
+                <h3>Common Myths About Pest Control</h3>
+                <p>Debunking common misconceptions about pest control and prevention.</p>
+                <!-- Full article content goes here -->
+            </div>
         </div>
-
-        <!-- Sidebar with Related Posts -->
-        <aside class="sidebar">
-            <h3>Related Articles</h3>
-            <ul>
-                <li><a href="blog_detail.html#eco-friendly">Eco-Friendly Pest Control Solutions</a></li>
-                <li><a href="blog_detail.html#winter-pests">Preventing Pests in the Winter Months</a></li>
-                <li><a href="blog_detail.html#diy-vs-pro">DIY Pest Control vs. Professional Services</a></li>
-            </ul>
-        </aside>
     </section>
 
     <!-- Footer -->
@@ -69,7 +84,5 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
 </body>
 </html>
