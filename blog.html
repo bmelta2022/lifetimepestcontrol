@@ -33,33 +33,40 @@
             <h2>Blog</h2>
             <p>Stay updated with our latest tips, news, and pest control advice! Here you'll find articles on eco-friendly pest solutions, seasonal pest prevention, and much more.</p>
             
-            <!-- Featured Blog Posts -->
-            <div class="featured-blogs">
-                <h3>Featured Articles</h3>
-                <div class="blog-grid">
-                    <div class="blog-post">
-                        <h4>Top 5 Tips for Effective Pest Control</h4>
-                        <p>Discover essential pest control tips that every homeowner should know to keep pests at bay.</p>
-                        <a href="blog_detail.html#top-tips" class="read-more">Read More</a>
-                    </div>
-                    <div class="blog-post">
-                        <h4>Eco-Friendly Pest Control Solutions</h4>
-                        <p>Learn about safe, environmentally friendly methods to manage pest problems without harmful chemicals.</p>
-                        <a href="blog_detail.html#eco-friendly" class="read-more">Read More</a>
-                    </div>
+            <!-- Search Bar -->
+            <input type="text" id="search-bar" placeholder="Search articles..." oninput="filterPosts()">
+
+            <!-- Blog Posts -->
+            <div id="blog-posts" class="blog-posts">
+                <div class="blog-post">
+                    <h4>Top 5 Tips for Effective Pest Control</h4>
+                    <p>Discover essential pest control tips that every homeowner should know to keep pests at bay.</p>
+                    <a href="blog_detail.html#top-tips" class="read-more">Read More</a>
+                    <button onclick="likePost(this)" class="like-button">👍 <span class="like-count">0</span></button>
+                </div>
+                <div class="blog-post">
+                    <h4>Eco-Friendly Pest Control Solutions</h4>
+                    <p>Learn about safe, environmentally friendly methods to manage pest problems without harmful chemicals.</p>
+                    <a href="blog_detail.html#eco-friendly" class="read-more">Read More</a>
+                    <button onclick="likePost(this)" class="like-button">👍 <span class="like-count">0</span></button>
+                </div>
+                <!-- Additional blog posts (initially hidden) -->
+                <div class="blog-post hidden">
+                    <h4>Preventing Pests in the Winter Months</h4>
+                    <p>Strategies to keep pests out during colder seasons.</p>
+                    <a href="blog_detail.html#winter-pests" class="read-more">Read More</a>
+                    <button onclick="likePost(this)" class="like-button">👍 <span class="like-count">0</span></button>
+                </div>
+                <div class="blog-post hidden">
+                    <h4>DIY Pest Control vs. Professional Services</h4>
+                    <p>Comparing the effectiveness and costs of DIY solutions versus professional pest control.</p>
+                    <a href="blog_detail.html#diy-vs-pro" class="read-more">Read More</a>
+                    <button onclick="likePost(this)" class="like-button">👍 <span class="like-count">0</span></button>
                 </div>
             </div>
 
-            <!-- Recent Articles Section -->
-            <div class="recent-articles">
-                <h3>Recent Articles</h3>
-                <ul class="article-list">
-                    <li><a href="blog_detail.html#winter-pests">Preventing Pests in the Winter Months</a></li>
-                    <li><a href="blog_detail.html#diy-vs-pro">DIY Pest Control vs. Professional Services</a></li>
-                    <li><a href="blog_detail.html#garden-pest-free">How to Keep Your Garden Pest-Free</a></li>
-                    <li><a href="blog_detail.html#pest-control-myths">Common Myths About Pest Control</a></li>
-                </ul>
-            </div>
+            <!-- Load More Button -->
+            <button id="load-more" onclick="loadMorePosts()">Load More</button>
         </div>
     </section>
 
@@ -71,5 +78,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
